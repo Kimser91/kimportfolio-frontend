@@ -14,7 +14,7 @@ const errorMessage = ref('')
 
 async function sendEmail() {
   try {
-    const response = await axios.post('http://localhost:3000/api/contact', form.value)
+    const response = await axios.post('https://api.kimportfolio.org/api/contact', form.value)
     if (response.status === 200) {
       successMessage.value = 'Meldingen er sendt! Jeg svarer så snart jeg kan.'
       form.value = { name: '', email: '', company: '', message: '' }
